@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Deck {
-	private List<Card> deck = new ArrayList<>(52);
+	private List<Card> deck = new ArrayList<>();
 
 	public Deck() {
 		super();
@@ -40,7 +40,10 @@ public class Deck {
 		return deck.size();
 	}
 	
-	public Card removeCard() {
+	public void removeCard(Deck cards) {
+		Card card = deck.get(0);
+	}
+	public  Card dealCard() {
 		return deck.remove(0);
 	}
 	public Card getCard() {

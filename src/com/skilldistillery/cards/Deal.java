@@ -29,7 +29,7 @@ public class Deal {
 			List<Card> hand = new ArrayList<>(numCards);
 			int totalValue = 0;
 			for (int i = 0; i < numCards; i++) {
-				Card c = deck.removeCard();
+				Card c = deck.dealCard();
 				totalValue += c.getValue();
 				hand.add(c);
 			}
