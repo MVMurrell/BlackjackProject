@@ -41,7 +41,7 @@ public class Card {
 		return rank + " of " + suit;
 	}
 	
-	public int value(Card card) {
+	public int getValue() {
 		return rank.getValue();
 		
 	}

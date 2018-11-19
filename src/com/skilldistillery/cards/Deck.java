@@ -1,17 +1,19 @@
 package com.skilldistillery.cards;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Deck {
-	private List<Card> deck = new ArrayList<>();
+	private List<Card> deck = new ArrayList<>(52);
 
 	public Deck() {
 		super();
 		makeDeck();
+		
 	}
 
-	private void makeDeck() {
+	public List<Card> makeDeck() {
 		Suit[] Suits = Suit.values();
 		Rank [] Ranks  = Rank.values();
 		for (int i = 0; i < Suits.length; i++) {
@@ -22,6 +24,28 @@ public class Deck {
 			}
 
 		}
+		return deck;
 	}
+	@Override
+	public String toString() {
+		String deckList = "";
+		for (Card card : deck) {
+			deckList += "\n" + "    " + card.toString();
+			
+		}
+		return deckList;
+	}
+
+	public int checkDeckSize() {
+		return deck.size();
+	}
+	
+	public Card dealCard() {
+		return deck.remove(0);
+	}
+	public void shuffle() {
+		Collections.shuffle(deck);
+	}
+	
 
 }
