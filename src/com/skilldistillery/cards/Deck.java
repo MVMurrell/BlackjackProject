@@ -40,8 +40,11 @@ public class Deck {
 		return deck.size();
 	}
 	
-	public Card dealCard() {
+	public Card removeCard() {
 		return deck.remove(0);
+	}
+	public Card getCard() {
+		return deck.get(0);
 	}
 	public void shuffle() {
 		Collections.shuffle(deck);
