@@ -12,11 +12,6 @@ public class Deck {
 		makeDeck();
 
 	}
-	
-
-	
-
-
 	public List<Card> makeDeck() {
 		Suit[] Suits = Suit.values();
 		Rank[] Ranks = Rank.values();
@@ -45,8 +40,8 @@ public class Deck {
 		return deck.size();
 	}
 
-	public void removeCard(int i) {
-		Card card = deck.get(0);
+	public void removeCard() {
+		deck.remove(0);
 	}
 
 	public Card dealCard() {
@@ -61,13 +56,7 @@ public class Deck {
 		Collections.shuffle(deck);
 	}
 
-	public int printHandAndValue1(List<Card> hand, int value) {
-		for (Card card : hand) {
-			System.out.println(card);
-		}
-		System.out.println("Total value: " + value);
-		return value;
-	}
+
 
 	public int getValue(List<Card> hand) {
 		int totalValue = 0;
